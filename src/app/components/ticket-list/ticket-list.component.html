@@ -1,0 +1,25 @@
+<button class="button-33" routerLink="/create" style="margin-bottom: 20px;">
+  Create Ticket
+</button>
+<dx-data-grid
+  [dataSource]="tickets"
+  [paging]="{ pageSize: 10 }"
+  [pager]="{ showPageSizeSelector: true, allowedPageSizes: [5, 10, 20], showInfo: true }"
+  [columnAutoWidth]="true"
+  [showBorders]="true"
+  (onRowPrepared)="onRowPrepared($event)"
+  (onCellPrepared)="onCellPrepared($event)"
+>
+  <dxo-editing mode="row" [allowUpdating]="false" [allowDeleting]="false"></dxo-editing>
+
+  <dxi-column dataField="phoneNumber" caption="Phone"></dxi-column>
+  <dxi-column dataField="governorate" caption="Governorate"></dxi-column>
+  <dxi-column dataField="city" caption="City"></dxi-column>
+  <dxi-column dataField="district" caption="District"></dxi-column>
+  <dxi-column dataField="status" caption="Status"></dxi-column>
+  <dxi-column dataField="creationDate" caption="Created" dataType="date"></dxi-column>
+  <dxi-column caption="Actions" [width]="120"></dxi-column>
+
+  
+  
+</dx-data-grid>

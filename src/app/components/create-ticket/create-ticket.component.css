@@ -1,0 +1,46 @@
+/* Container styling for a card-like appearance */
+.form-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Input styling with focus effect */
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+/* Error message styling */
+.error-message small {
+  color: red;
+  margin-top: 5px;
+}
+
+/* Center align elements */
+.center {
+  text-align: center;
+}
+

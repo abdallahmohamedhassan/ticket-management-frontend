@@ -1,0 +1,49 @@
+<div class="form-container">
+  <button class="button-19" routerLink="/list" style="margin-bottom: 20px;">
+    Ticket List
+  </button>
+  
+  <form [formGroup]="ticketForm" (ngSubmit)="submitTicket()">
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input formControlName="phoneNumber" id="phoneNumber" type="text" required />
+      <div class="error-message" *ngIf="ticketForm.get('phoneNumber')?.touched && ticketForm.get('phoneNumber')?.invalid">
+        <small *ngIf="ticketForm.get('phoneNumber')?.errors?.['required']">Phone number is required.</small>
+        <small *ngIf="ticketForm.get('phoneNumber')?.errors?.['pattern']">Invalid phone number format (e.g., 11 digits).</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="governorate">Governorate</label>
+      <input formControlName="governorate" id="governorate" type="text" required />
+      <div class="error-message" *ngIf="ticketForm.get('governorate')?.touched && ticketForm.get('governorate')?.invalid">
+        <small *ngIf="ticketForm.get('governorate')?.errors?.['required']">Governorate is required.</small>
+        <small *ngIf="ticketForm.get('governorate')?.errors?.['pattern']">Only letters are allowed.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <input formControlName="city" id="city" type="text" required />
+      <div class="error-message" *ngIf="ticketForm.get('city')?.touched && ticketForm.get('city')?.invalid">
+        <small *ngIf="ticketForm.get('city')?.errors?.['required']">City is required.</small>
+        <small *ngIf="ticketForm.get('city')?.errors?.['pattern']">Only letters are allowed.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="district">District</label>
+      <input formControlName="district" id="district" type="text" required />
+      <div class="error-message" *ngIf="ticketForm.get('district')?.touched && ticketForm.get('district')?.invalid">
+        <small *ngIf="ticketForm.get('district')?.errors?.['required']">District is required.</small>
+        <small *ngIf="ticketForm.get('district')?.errors?.['pattern']">Only letters are allowed.</small>
+      </div>
+    </div>
+
+    <div class="form-group center">
+      <button type="submit" class="button-33">
+        Create Ticket
+      </button>
+    </div>
+  </form>
+</div>
