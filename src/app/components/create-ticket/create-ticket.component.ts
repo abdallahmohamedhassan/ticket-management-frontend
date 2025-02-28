@@ -14,7 +14,7 @@ export class CreateTicketComponent {
   constructor(private fb: FormBuilder, private ticketService: TicketService, private toster: ToastrService) {
 
     this.ticketForm = this.fb.group({
-      phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{11}$')]], // Example for phone number validation
+      phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]{11}$')]], 
       governorate: ['', [Validators.required, Validators.pattern('^[A-Za-z\s]+$')]],
       city: ['', [Validators.required, Validators.pattern('^[A-Za-z\s]+$')]],
       district: ['', [Validators.required, Validators.pattern('^[A-Za-z\s]+$')]]
@@ -36,7 +36,7 @@ export class CreateTicketComponent {
       
     }else
     {
-      this.ticketForm.markAllAsTouched(); // Mark all fields as touched to show validation errors
+      this.ticketForm.markAllAsTouched(); 
       this.toster.error('Fields are required' , 'error')
 
     }

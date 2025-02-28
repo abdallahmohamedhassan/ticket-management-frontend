@@ -9,7 +9,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { DxDataGridModule } from 'devextreme-angular';
 @NgModule({
   declarations: [
@@ -24,7 +23,6 @@ import { DxDataGridModule } from 'devextreme-angular';
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
-    NgxPaginationModule,
     DxDataGridModule, 
    
     ToastrModule.forRoot({

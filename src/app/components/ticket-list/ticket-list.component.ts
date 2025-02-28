@@ -19,7 +19,6 @@ export class TicketListComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.loadTickets();
 
-    // Update ticket colors dynamically
     this.counterSubscription = interval(60 * 1000).subscribe(() => {
       this.updateTicketColors();
     });
@@ -57,10 +56,10 @@ export class TicketListComponent implements OnInit, OnDestroy {
         color = 'red';
       }
   
-      return { ...ticket, color }; // Create a new object to trigger change detection
+      return { ...ticket, color }; 
     });
   
-    this.cdr.detectChanges(); // Force UI update
+    this.cdr.detectChanges(); 
 
 
   }
